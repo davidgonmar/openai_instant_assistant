@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "openai_instant_assistant"
+version = "0.1.0"
+description = "Create an OpenAI assistant with RAG on the files of a directory"
+authors = ["David González Martínez <me@davidgonmar.me>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+openai = "^1.3.4"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.6"
+black = "^23.11.0"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+create-assistant = "openai_instant_assistant.cli:main"
+
